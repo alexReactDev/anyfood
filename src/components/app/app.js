@@ -1,12 +1,8 @@
-import { Redirect, Route, Switch } from 'react-router-dom';
-import Restaurants from '../restaurants';
-import Header from '../header';
-import Basket from '../basket';
 import { UserProvider } from '../../contexts/user-context';
 import { useState } from 'react';
-import Error from "../error";
 import { ConvertContextProvider } from '../../contexts/convert-context';
 import  style  from "./app.style.module.css";
+import Main from '../main';
 
 const App = () => {
   const [name, setName] = useState('Andrey');
@@ -34,15 +30,7 @@ const App = () => {
       </div>
       <ConvertContextProvider value={converter[currency]}>
       <UserProvider value={{ name, setName }}>
-         <Header />
-         <Switch>
-            <Redirect exact from="/" to="/restaurants" />
-            <Route path="/checkout" component={Basket} />
-            <Route path="/restaurants" component={Restaurants} />
-            <Route path="/error" component={Error} />
-            <Route path="/thanks" component={() => <h2>Спасибо за заказ</h2>} />
-            <Route path="/" component={() => <h2>404 - Not found :(</h2>} />
-         </Switch>
+         <Main />
        </UserProvider>
       </ConvertContextProvider>
     </div>
