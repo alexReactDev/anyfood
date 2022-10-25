@@ -22,7 +22,7 @@ const Main = () => {
             )} />
             <Route path="/restaurants" component={Restaurants} />
             <Route path="/error" component={Error} />
-            <Route path="/thanks" component={() => <h2>Спасибо за заказ</h2>} />
+            <Route path="/thanks" component={() => <h2 style={{textAlign: "center"}}>Спасибо за заказ</h2>} />
             <Route path="/" component={() => <h2>404 - Not found :(</h2>} />
          </Switch>
 			</main>
