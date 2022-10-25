@@ -1,30 +1,32 @@
-.menu {
+.menu {}
+
+.menu__body {
   display: flex;
   flex-direction: column;
   padding-bottom: 60px;
   padding-top: 12px;
 }
 
-.menu > * {
+.menu__body > * {
   padding: 12px 0;
 }
 
 @media all and (min-width: 768px) {
-  .menu {
+  .menu__body {
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 0;
   }
 
-  .menu > *:first-child {
+  .menu__body > *:first-child {
     flex: 1 0 calc(100% - 400px - 2 * 24px);
   }
 
-  .menu > *:last-child {
+  .menu__body > *:last-child {
     flex: 1 0 calc(400px - 24px);
   }
 
-  .menu > * {
+  .menu__body > * {
     padding: 0 12px;
   }
 }
