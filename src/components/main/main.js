@@ -3,6 +3,7 @@ import Header from '../header'
 import Basket from '../basket';
 import Restaurants from '../restaurants';
 import Footer from '../footer';
+import Error from '../error';
 
 const Main = () => {
 	return (

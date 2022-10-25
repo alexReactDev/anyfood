@@ -1,17 +1,25 @@
 import { useEffect } from "react";
 import { connect } from "react-redux"
 import { errorPageLeave } from "../../redux/actions";
-import { errorMessageSelector } from "../../redux/selectors"
+import { errorMessageSelector } from "../../redux/selectors";
+import style from "./style.module.css";
 
 function Error( { errorMessage, onUnmount } ) {
 
 	useEffect(() => () => onUnmount());
 
 	return(
-		<div>
-			<h2>
-				{errorMessage}
-			</h2>
+		<div className={style.errorPage}>
+			<div className="content">
+				<div className={style.errorPage__body}>
+					<h2 className={style.errorPage__title}>
+						Error!
+					</h2>
+					<p className={style.errorPage__text}>
+						{errorMessage}
+					</p>
+				</div>
+			</div>
 		</div>
 	)
 }

@@ -113,7 +113,7 @@ export const createOrder = () => async (dispatch, getState) => {
 
   }
   catch(error) {
-    dispatch( {type: CREATE_ORDER + FAILURE } );
+    dispatch( { type: CREATE_ORDER + FAILURE } );
     dispatch( push("/error") );
   }
 }

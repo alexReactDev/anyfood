@@ -1,0 +1,14 @@
+.errorPage {}
+
+.errorPage__body {
+	max-width: 600px;
+	margin: 30px auto;
+	border: solid red 1px;
+	background-color: rgb(255, 202, 202);
+	text-align: center;
+	color: darkred;
+}
+
+.errorPage__title {}
+
+.errorPage__text {}
