@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { userContext } from '../../contexts/user-context';
 import { ReactComponent as Logo } from '../../icons/logo.svg';
+import CurrencyMenu from '../CurrencyMenu';
 import styles from './header.module.css';
 
 const Header = () => {
@@ -14,6 +15,7 @@ const Header = () => {
       setEdit(false);
       setName(newName || name);
       }}>
+      <CurrencyMenu />
       <Link to="/restaurants">
         <Logo />
       </Link>
