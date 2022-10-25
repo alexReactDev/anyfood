@@ -1,6 +1,7 @@
 const express = require('express');
 const api = require('./api');
 const bodyParser = require('body-parser');
+const path = require('path');
 const port = 3001;
 
 const app = express();
@@ -11,6 +12,11 @@ app.use(function (req, res, next) {
 });
 app.use(bodyParser.json());
 app.use('/api', api);
+app.use(express.static(path.join(__dirname + "/public")));
+
+app.get('*', (req, res) => {
+  return res.sendFile(path.join(__dirname, "/public", "index.html"));
+})
 
 app.listen(port, 'localhost', function (err) {
   if (err) {

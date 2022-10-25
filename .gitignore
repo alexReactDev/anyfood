@@ -10,6 +10,8 @@ node_modules
 
 # production
 /build
+static/
+/simple_api/public
 
 # misc
 .DS_Store
